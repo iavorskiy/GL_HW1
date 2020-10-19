@@ -1,0 +1,5 @@
+---
+- name: Create a variable
+  shell: cat "{{path}}"
+  register: issue_result
+  ignore_errors: True

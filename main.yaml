@@ -1,0 +1,12 @@
+---
+- hosts: iaas
+  roles:
+    - empty_file
+- hosts: all
+  roles:    
+    - issue_as_variable
+  tasks:
+    - name: Print in registrated variables
+      debug:
+        msg: "Content of /etc/issue file {{ issue_result }} for host {{ inventory_hostname }}"
+        

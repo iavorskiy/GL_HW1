@@ -1,0 +1,7 @@
+---
+- name: Create a new file with permissions
+  file:
+    path: "{{path}}"
+    state: touch
+    mode: "{{mode}}"
+      
